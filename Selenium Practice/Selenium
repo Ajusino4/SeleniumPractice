@@ -1,0 +1,27 @@
+import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Selenium {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Antonio Jusino\\Desktop\\Selenium\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.linkedin.com");
+		WebElement link;
+		link = driver.findElement(By.linkText("Jobs"));
+		link.click();
+		Thread.sleep(5000);
+		WebElement searchBox;
+		searchBox = driver.findElement(By.id("keyword-box-input"));
+		searchBox.sendKeys("Publix");
+		searchBox.submit();
+		Thread.sleep(5000);
+		driver.quit();
+		
+
+	}
+
+}
