@@ -1,2 +1,2 @@
 # SeleniumPractice
-Showing my beginner knowledge of Selenium
+Showing my knowledge of Selenium
